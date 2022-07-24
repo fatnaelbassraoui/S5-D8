@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+  <!--
+        ESERCIZI HTML
+
+        1) Assegna un titolo per questa pagina
+        2) Crea un tag h1 con il contenuto che preferisci
+        3) Crea una lista ordinata con alcuni elementi al suo interno
+        4) Crea una tabella con 4 righe e 5 colonne
+        5) Aggiungi un'immagine a ogni seconda cella di ogni riga
+        6) Aggiungi un tag <a> ad ogni immagine
+        7) Unisci insieme 2 celle della tabella
+        8) Dividi la pagina inserendo una riga orizzontale
+        9) Crea un elemento contenitore con al suo interno un paragrafo e una lista non ordinata
+        10) Crea un footer contenente alcune informazioni sul creatore della pagina
+
+        ESERCIZI CSS
+
+        11) Assegna una larghezza massima al tag body e centralo nella pagina
+        12) Centra ogni tag h1
+        13) Cambia il colore di ogni link nella pagina
+        14) Crea una classe e assegnale un bordo
+        15) Fai in modo che la i bordi della tabella che hai creato siano arrotondati
+        16) Aggiungi un margine ad ogni paragrafo
+        17) Crea una classe che una volta assegnata cambi la dimensione e il peso del font
+        18) Crea una classe per nascondere un elemento
+        19) Aggiungi un bordo verde a ogni <td>
+        20) Aggiungi un bordo puntato rosso a ogni <tr> (nota: <tr> non accetta una proprietà "border")
+
+        ESERCIZI JAVASCRIPT
+
+        21) Date le variabili x = "John" e y = "Doe", mostra in console "John <> Doe"
+        22) Crea un oggetto con le seguenti proprietà: name, surname, email
+        23) Cancella la proprietà email dall'oggetto appena creato
+        24) Crea un array contenente 10 stringhe
+        25) Mostra in console ogni stringa del precedente array
+        26) Crea un array contenente 100 numeri random
+        27) Scrivi una funzione per trovare il valore massimo e il valore minimo dall'array appena creato
+        28) Crea un array di array, nel quale ogni array "figlio" ha 10 numeri random
+        29) Crea una funzione che riceve 2 array come parametri e ritorni quello con più elementi
+        30) Crea una funzione che riceve 2 array numerici come parametri e ritorna quello con la somma totale degli elementi maggiore
+
+        ESERCIZI SUL DOM
+
+        31) Seleziona l'elemento con id "container" nella pagina
+        32) Seleziona tutti gli elementi di tipo <td> nella pagina
+        33) Usa un ciclo per stampare in console il testo contenuto in ogni elemento <td> nella pagina
+        34) Scrivi una funzione per cambiare il titolo della pagina
+        35) Scrivi una funzione per aggiungere una nuova riga alla tabella nella pagina
+        36) Scrivi una funzione per aggiungere la classe "test" ad ogni riga nella tabella
+        37) Scrivi una funzione per aggiungere uno sfondo rosso a ogni link presente nella pagina
+        38) Mostra in console "Page loaded" quando la pagina ha finito di caricarsi
+        39) Scrivi una funzione per aggiungere nuovi elementi alla lista non ordinata nella pagina
+        40) Scrivi una funzione per svuotare una lista nella pagina
+
+        ESERCIZI EXTRA
+
+        41) Aggiungi un event listener in modo che compaia un alert quando il cursore passa sopra un link; 
+        l'alert deve mostrare la sua proprietà href
+        42) Crea un bottone che una volta cliccato nasconde ogni immagine nella pagina
+        43) Crea un bottone che una volta cliccato nasconde o mostra la tabella nella pagina
+        44) Crea una funzione per calcolare la somma di ogni numero contenuto in tutte le celle
+         della tabella (se il contenuto è un numero)
+        45) Cancella l'ultima lettera dal titolo della pagina ogni volta che l'utente ci clicca sopra
+        46) Aggiungi un event listener in modo che cliccando un <td> nella pagina, questo cambi colore di sfondo
+        47) Aggiungi un bottone che una volta cliccato elimini un <td> a caso nella tabella
+        48) Aggiungi automaticamente un bordo rosa ad una cella della tabella quando il cursore ci passa sopra
+        49) Scrivi una funzione per creare una tabella con 4 righe e 3 colonne e aggiungerla alla fine della pagina
+        50) Scrivi una funzione per rimuovere l'ultima tabella presente nella pagina
+        
+    -->
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+    <style>
+
+        /*
+        
+        /*18) Crea una classe per nascondere un elemento
+
+        .collaps{
+          visibility: hidden;
+        }*/
+       
+       /* 20) Aggiungi un bordo puntato rosso a ogni <tr> (nota: <tr> non accetta una proprietà "border")*/
+      
+        html{
+        display: flex;
+    justify-content: space-around;
+    background-color: beige;
+      }
+      body{
+        margin:0;
+        width: 80vw;
+        align-items: center;
+        background-color: rgb(207, 211, 211);
+        display: flex;
+        flex-wrap: wrap;
+      }
+      nav{
+        display: flex;
+        justify-content: space-around;
+        background-color: black;
+        width: 100%;
+        color: antiquewhite;
+        height: 35px;
+        align-items: center;
+      }
+
+      @keyframes cambiaColore{
+        from{ 
+          color:antiquewhite;}
+        to{
+          color: yellowgreen;
+        }
+      }
+      .border{
+        width: 20%;
+        border-right: 2px groove black;
+        font-style: italic;
+          
+      }
+
+      .font{
+        font-size: large ;
+      }
+      h1{
+        text-align: center;
+        
+      }
+      h1:hover{
+        color: blue 1s;
+      }
+      
+      p { margin: 5px;
+        animation: cambiaColore 1s infinite;
+
+      }
+      p::before{
+        content: "questo e' la :";
+        color: red;
+      }
+      section{
+        display: flex;
+        justify-content: space-between;
+        
+      }
+
+      .secButton{
+        display: flex;
+        align-items: center;
+        margin-left: 15px;
+      }
+      article{
+        display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+      }
+      #div1{
+        width:100%;
+      }
+
+      #div2{
+        width:100%;
+      }
+      .cambiaClasse{
+        margin-left: 255px;
+        margin-bottom: 10px;
+      }
+      table {
+       width: 95%;
+        /*border-color:  2px solid black;*/
+        border-radius: 5%;
+        margin-left: 16px;
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin-bottom: 5px;
+
+      }
+
+      th{
+        border: 2px solid black;
+      }
+      
+      td{
+        
+        border: 2px solid green;
+  
+      }
+
+      .test{
+        background-color: rgb(221, 244, 236);
+      }
+      .test1{
+        background-color: aliceblue;
+      }
+
+      a{
+        color: red;
+       }
+      a:visited {
+         color:rgb(42, 165, 85); 
+      }
+      img{
+        width: 200px;
+    height: 100px;
+      }
+      
+      footer{
+        display: flex;
+    justify-content: space-around;
+    background-color: black;
+    width: 100%;
+    color: white;
+    height: 35px;
+    align-items: center;
+      }
+    </style>
+  </head>
+  <body cz-shortcut-listen="true">
+  <nav class="font" >
+    <h1 id="tit" >ESERCIZIO D8</h1> </nav>
+  <section>
+    <aside class="border" >
+      <div class="font">
+      <p >lista numero 2</p>
+      <ul >
+        <li class="ulList">unordred list</li>
+        <li class="ulList">unordredlist</li>
+        <li class="ulList">unordred list</li>
+      </ul>
+    </div>
+    <button id="nascondiImmagine" class="secButton" type="button">nascondiImmagine</button>
+    <button id="nascondiTabella" class="secButton"  type="button">nascondiTabella</button>
+    <button id="nascondiTd" class="secButton"  type="button">nascondiTd</button>
+    </aside>
+    <article>
+    <div id="div1" class="font">  
+    <h1 id="h1" onclick="cambiaTitolo()">Progetto finale</h1>
+    <p id="demo"></p>
+     <Ol>
+      <li class="collaps">primo</li>
+      <li>secondo</li>
+      <li>terzo</li>
+     </Ol>
+    </div>
+    <div id="div2">
+    <button id="table1" class="cambiaClasse" type="button" >Change class of tr</button>
+    
+     <table id="table" onclick="tableFunction()">
+      <thead>
+      <tr >
+        <th >riga 1</th>
+        <th >riga 2</th>
+        <th >riga 3</th>
+        <th >riga 4</th>
+        <th >riga 5</th>
+        <th >riga 6</th>
+      </tr>
+    </thead>
+    <tbody id="tbody">
+      <tr >
+        <td id="pink" colspan="3"><a  href="https://www.google.com/search?q=img&sxsrf=ALiCzsbB3VexpdMjLyM9eLVSlbxlZSRZ7Q:1658068263361&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj5-ebOkYD5AhVCQ_EDHaGyDc0Q_AUoAXoECAMQAw&biw=1280&bih=520&dpr=1.5#imgrc=nJlIy554f6U0jM">link img1</a>
+        <img src="img/img1.jpg"></td>
+        <td colspan="3"><a   href="https://www.google.com/search?q=img&sxsrf=ALiCzsbB3VexpdMjLyM9eLVSlbxlZSRZ7Q:1658068263361&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj5-ebOkYD5AhVCQ_EDHaGyDc0Q_AUoAXoECAMQAw&biw=1280&bih=520&dpr=1.5#imgrc=nJlIy554f6U0jM">link img2</a>
+          <img src="img/img2.jpg"></td>
+      </tr>
+      <tr id="ChangeBackgroundColor" >
+        <td colspan="3"><a  href="https://www.google.com/search?q=img&sxsrf=ALiCzsbB3VexpdMjLyM9eLVSlbxlZSRZ7Q:1658068263361&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj5-ebOkYD5AhVCQ_EDHaGyDc0Q_AUoAXoECAMQAw&biw=1280&bih=520&dpr=1.5#imgrc=nJlIy554f6U0jM">link img3</a>
+        <img src="img/img3.jpg"></td>
+        <td colspan="3"><a   href="https://www.google.com/search?q=img&sxsrf=ALiCzsbB3VexpdMjLyM9eLVSlbxlZSRZ7Q:1658068263361&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj5-ebOkYD5AhVCQ_EDHaGyDc0Q_AUoAXoECAMQAw&biw=1280&bih=520&dpr=1.5#imgrc=nJlIy554f6U0jM">link img4</a>
+        <img src="img/img4.jpg"></td>
+      </tr>
+      <tr >
+        <td colspan="3"><a   href="https://www.google.com/search?q=img&sxsrf=ALiCzsbB3VexpdMjLyM9eLVSlbxlZSRZ7Q:1658068263361&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj5-ebOkYD5AhVCQ_EDHaGyDc0Q_AUoAXoECAMQAw&biw=1280&bih=520&dpr=1.5#imgrc=nJlIy554f6U0jM">link img5</a>
+        <img src="img/img5.jpg"></td>
+        <td colspan="3"><a   href="https://www.google.com/search?q=img&sxsrf=ALiCzsbB3VexpdMjLyM9eLVSlbxlZSRZ7Q:1658068263361&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj5-ebOkYD5AhVCQ_EDHaGyDc0Q_AUoAXoECAMQAw&biw=1280&bih=520&dpr=1.5#imgrc=nJlIy554f6U0jM">link img6</a>
+        <img src="img/img6.jpg"></td>
+      </tr>
+      <tr >
+        <td colspan="3"><a   href="https://www.google.com/search?q=img&sxsrf=ALiCzsbB3VexpdMjLyM9eLVSlbxlZSRZ7Q:1658068263361&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj5-ebOkYD5AhVCQ_EDHaGyDc0Q_AUoAXoECAMQAw&biw=1280&bih=520&dpr=1.5#imgrc=nJlIy554f6U0jM">link img7</a>
+        <img src="img/img7.jpg"></td>
+        <td colspan="3"><a   href="https://www.google.com/search?q=img&sxsrf=ALiCzsbB3VexpdMjLyM9eLVSlbxlZSRZ7Q:1658068263361&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj5-ebOkYD5AhVCQ_EDHaGyDc0Q_AUoAXoECAMQAw&biw=1280&bih=520&dpr=1.5#imgrc=nJlIy554f6U0jM">link img8</a>
+        <img src="img/img8.jpg"></td>
+      </tr>
+      <tr >
+        <td colspan="3"><a   href="https://www.google.com/search?q=img&sxsrf=ALiCzsbB3VexpdMjLyM9eLVSlbxlZSRZ7Q:1658068263361&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj5-ebOkYD5AhVCQ_EDHaGyDc0Q_AUoAXoECAMQAw&biw=1280&bih=520&dpr=1.5#imgrc=nJlIy554f6U0jM">link img9</a>
+        <img src="img/img9.jpg"></td>
+        <td colspan="3"><a   href="https://www.google.com/search?q=img&sxsrf=ALiCzsbB3VexpdMjLyM9eLVSlbxlZSRZ7Q:1658068263361&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj5-ebOkYD5AhVCQ_EDHaGyDc0Q_AUoAXoECAMQAw&biw=1280&bih=520&dpr=1.5#imgrc=nJlIy554f6U0jM">link img10</a>
+        <img src="img/img10.jpg"></td>
+      </tr>
+    </tbody>
+     </table>
+
+    </div>
+    
+  </article>
+  </section>
+  <footer>Ufficio Napoli: Via Pallonetto Santa Chiara 8, Napoli. P. IVA 07103711219 
+        <br>Email: info@mysocialweb.it, Tel: 340 7974009</footer>
+    
+  </body>
+  <script src="script.js"></script>
+  
+</html>
+
+
